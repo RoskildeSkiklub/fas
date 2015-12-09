@@ -1,5 +1,5 @@
-fas
-====
+FAS
+===
 
 Festival Administration System is a very small administrative system for assigning volunteers to the "Skiburgeren", run by Roskilde Skiklub, at the Roskilde Festival held every summer in Denmark.
 
