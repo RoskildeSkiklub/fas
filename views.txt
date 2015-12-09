@@ -1,0 +1,40 @@
+vw_SkiUserPeriode
+
+SELECT     TOP (100) PERCENT tblSkiPerioder.periode, tblSkiBrugerTider.pw, tblSkiPerioder.sortorder, 
+                      tblSkiPerioder.max, tblSkiPerioder.id, tblSkiPerioder.minmax, 
+                      tblSkiPerioder.dato, tblSkiPerioder.tid, tblSkiBrugerTider.email
+FROM         tblSkiBrugerTider RIGHT OUTER JOIN
+                      tblSkiPerioder ON tblSkiBrugerTider.PeriodeID = tblSkiPerioder.id
+ORDER BY tblSkiPerioder.periode
+
+-------------------------------------------------------------
+
+vw_SkiUnder
+
+SELECT     COUNT(id) AS CountOfid
+FROM         tblSkiBruger
+WHERE     (DATEDIFF(day, fdato, '01-07-1990') < 0)
+
+-------------------------------------------------------------
+
+vw_SkiAntalVagter
+
+SELECT     pw, email, COUNT(PeriodeID) AS AntalOfPeriodeID
+FROM         tblSkiBrugerTider
+GROUP BY pw, email
+
+-------------------------------------------------------------
+
+vw_SkiAntalTimer
+
+SELECT     tblSkiBrugerTider.pw, tblSkiBrugerTider.email, SUM(tblSkiPerioder.value) AS SumOfvalue
+FROM         tblSkiBrugerTider RIGHT OUTER JOIN
+                      tblSkiPerioder ON tblSkiBrugerTider.PeriodeID = tblSkiPerioder.id
+GROUP BY tblSkiBrugerTider.pw, tblSkiBrugerTider.email
+
+-------------------------------------------------------------
+
+vw_SkiAll
+
+SELECT     COUNT(id) AS CountOfid
+FROM         tblSkiBruger

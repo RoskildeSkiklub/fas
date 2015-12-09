@@ -1,0 +1,139 @@
+USE [thoma22_hors]
+GO
+
+/****** Object:  Table [thoma22_thomas].[tblSkiBruger]    Script Date: 02/18/2011 20:41:20 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [thoma22_thomas].[tblSkiBruger](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[navn] [nvarchar](100) NULL,
+	[Efternavn] [nvarchar](50) NULL,
+	[adresse] [nvarchar](255) NULL,
+	[postnr] [nvarchar](50) NULL,
+	[bye] [nvarchar](255) NULL,
+	[land] [nvarchar](50) NULL,
+	[email] [nvarchar](255) NULL,
+	[telefon] [nvarchar](50) NULL,
+	[vagtleder] [nvarchar](50) NULL,
+	[tshirtStr] [nvarchar](50) NULL,
+	[pw] [nvarchar](50) NULL,
+	[fdato] [datetime] NULL,
+	[bemaerk] [ntext] NULL,
+	[OPS1] [nvarchar](50) NULL,
+	[OPS2] [nvarchar](50) NULL,
+	[OPS3] [nvarchar](50) NULL,
+	[NED1] [nvarchar](50) NULL,
+	[medlem] [nvarchar](50) NULL,
+	[kontakt] [nvarchar](200) NULL,
+	[camping] [nvarchar](50) NULL,
+	[inact] [nvarchar](50) NULL,
+	[mnummer] [int] NULL,
+	[andreBesk] [ntext] NULL,
+	[bnummer] [int] NULL,
+	[edited] [nvarchar](50) NULL,
+	[TidlArb] [nvarchar](50) NULL,
+	[gruppe] [nvarchar](50) NULL,
+	[arbopg] [nvarchar](50) NULL,
+	[1] [nvarchar](50) NULL,
+	[2] [nvarchar](50) NULL,
+	[3] [nvarchar](50) NULL,
+	[4] [nvarchar](50) NULL,
+	[vente] [nvarchar](50) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+------------------------------------------------------
+
+USE [thoma22_hors]
+GO
+
+/****** Object:  Table [thoma22_thomas].[tblSkiBrugerTider]    Script Date: 02/18/2011 20:42:14 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [thoma22_thomas].[tblSkiBrugerTider](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[PeriodeID] [int] NULL,
+	[email] [nvarchar](50) NULL,
+	[pw] [nvarchar](50) NULL,
+	[vagtled] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+
+------------------------------------------------------
+
+USE [thoma22_hors]
+GO
+
+/****** Object:  Table [thoma22_thomas].[tblSkiData]    Script Date: 02/18/2011 20:42:53 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [thoma22_thomas].[tblSkiData](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[18aar] [nvarchar](50) NULL,
+	[15aar] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+
+-------------------------------------------------------
+
+USE [thoma22_hors]
+GO
+
+/****** Object:  Table [thoma22_thomas].[tblSkiPerioder]    Script Date: 02/18/2011 20:43:21 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [thoma22_thomas].[tblSkiPerioder](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[dato] [smalldatetime] NULL,
+	[tid] [nvarchar](50) NULL,
+	[value] [int] NULL,
+	[sortorder] [int] NULL,
+	[graa] [int] NULL,
+	[max] [int] NULL,
+	[overlap] [nvarchar](50) NULL,
+	[minmax] [nvarchar](50) NULL,
+	[valis] [nvarchar](50) NULL,
+	[periode] [nvarchar](50) NULL,
+	[ekstra] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+
+---------------------------------------------------------
+
+USE [thoma22_hors]
+GO
+
+/****** Object:  Table [thoma22_thomas].[tblSkiTid]    Script Date: 02/18/2011 20:44:02 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [thoma22_thomas].[tblSkiTid](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[tid] [int] NULL
+) ON [PRIMARY]
+
+GO
+

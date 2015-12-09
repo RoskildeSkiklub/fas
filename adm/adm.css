@@ -1,0 +1,33 @@
+
+body{
+	font-size:12px;
+	font-family: Tahoma
+}
+table{
+		font-size:12px;
+	font-family: Tahoma;
+	background-color:#cccccc
+}
+td{
+		font-size:12px;
+	font-family: Tahoma;
+	background-color: #ffffff;
+		font-size:12px;
+}
+.descr{
+		font-size:12px;
+	font-family: Tahoma;
+	padding:5px;
+	border: solid 1px #88A1A6;
+	display:none;
+	position:absolute;
+	margin-left:80px;
+	background-color: #cad4d7;
+	color: #000000 /*#475b5f*/;
+	width:150px;
+	white-space: nowrap;
+	}
+	
+	a{
+		color: blue
+	}
